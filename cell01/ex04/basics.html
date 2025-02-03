@@ -11,44 +11,59 @@
             font-family: Arial, sans-serif;
         }
 
-        .images {
+        h1 {
+            justify-self: center;
+            color: white;
+        }
+
+        .shops {
             display: flex;
             justify-content: center;
             gap: 20px;
         }
 
-        .images img {
+        .shops img {
             width: 200px;
             height: auto;
+        }
+
+        .shops>.shop {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
         }
 
         .footer {
             text-align: right;
             font-style: italic;
             font-family: 'Courier New', monospace;
-            position: absolute;
-            bottom: 10px;
-            right: 20px;
         }
     </style>
 </head>
 
 <body>
-    <div class="images">
-        <div>
-            <img src="https://placehold.co/200x200" alt="Online Shop 1">
-            <a href="https://placehold.co/200x200">Visit Shop 1</a>
+    <nav>
+        <h1>Basics!</h1>
+    </nav>
+    <div class="shops">
+        <div class="shop">
+            <img src="https://img.kaidee.com/prd/20240514/369562129/b/df9924de-5757-4137-a5a1-ad9c02d23afd.jpg"
+                alt="Shopee">
+            <a href="https://shopee.co.th/">Shopee</a>
         </div>
-        <div>
-            <img src="https://placehold.co/200x200" alt="Online Shop 2">
-            <a href="https://placehold.co/200x200">Visit Shop 2</a>
+        <div class="shop">
+            <img src="https://laz-img-cdn.alicdn.com/tfs/TB1PApewFT7gK0jSZFpXXaTkpXa-200-200.png" alt="lazada">
+            <a href="https://www.lazada.co.th/">Lazada</a>
         </div>
     </div>
 
     <hr>
 
     <div class="footer">
-        © wil 2025
+        <span id="copyright"> © ylimwila
+            <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+        </span>
     </div>
 
 </body>
