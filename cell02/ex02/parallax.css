@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.parallax {
+    opacity: 0.8;
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+}
+
+.black-block {
+    background-color: black;
+    padding: 64px;
+    height: 300px;
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#img1 {
+    background-image: url("https://cdn.mos.cms.futurecdn.net/KgJ2GoxKFrnKo3pChxvJxN.jpg");
+    min-height: 100vh;
+    color: white;
+}
+
+#img2 {
+    background-image: url("https://a.storyblok.com/f/178900/920x518/fb8850f0cf/bocchi-the-rock.jpg/m/filters:quality(95)format(webp)");
+    min-height: 70vh;
+
+}
