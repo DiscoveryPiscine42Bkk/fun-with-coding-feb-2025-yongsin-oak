@@ -9,16 +9,16 @@
 </head>
 
 <body>
-    <button id="btn">Click !!!!!!</button>
+    <button onclick="randomColor()">Click !!!!!!</button>
+    <script>
+        const randomColor = () => {
+            const randomRed = Math.floor(Math.random() * 256);
+            const randomGreen = Math.floor(Math.random() * 256);
+            const randomBlue = Math.floor(Math.random() * 256);
+            const randomColor = `rgb(${randomRed}, ${randomGreen}, ${randomBlue})`;
+            document.body.style.backgroundColor = randomColor;
+        };
+    </script>
 </body>
 
 </html>
-<script>
-    document.getElementById('btn').addEventListener('click', function () {
-        const randomRed = Math.floor(Math.random() * 256);
-        const randomGreen = Math.floor(Math.random() * 256);
-        const randomBlue = Math.floor(Math.random() * 256);
-        const randomColor = `rgb(${randomRed}, ${randomGreen}, ${randomBlue})`;
-        document.body.style.backgroundColor = randomColor;
-    });
-</script>
