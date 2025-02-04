@@ -33,7 +33,6 @@
 
 <body>
     <div class="container">
-        <p id="balloon-size">Ballon size:</p>
         <div class="ballon" onclick="sizeIncrease()" onmouseleave="sizeDecrease()">
         </div>
     </div>
@@ -53,7 +52,6 @@
                 ballon.style.height = '200px';
             }
             const text = document.getElementById('balloon-size');
-            text.innerText = `Ballon size: ${ballon.offsetWidth}px`;
         }
         const sizeDecrease = () => {
             if (ballon.offsetWidth > 200) {
@@ -65,7 +63,6 @@
             ballon.style.backgroundColor = colors[curColor];
 
             const text = document.getElementById('balloon-size');
-            text.innerText = `Ballon size: ${ballon.offsetWidth}px`;
 
         }
     </script>
