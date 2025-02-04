@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ballon</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        box-sizing: border-box;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ballon {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <p id="balloon-size">Ballon size:</p>
+        <div class="ballon" onclick="sizeIncrease()" onmouseleave="sizeDecrease()">
+        </div>
+    </div>
+    <script>
+        let curColor = 0;
+        const colors = ["red", "green", "blue"];
+        const ballon = document.querySelector('.ballon');
+        const sizeIncrease = () => {
+            const ballonSize = ballon.offsetWidth;
+            ballon.style.width = ballonSize + 10 + 'px';
+            ballon.style.height = ballonSize + 10 + 'px';
+            curColor = (curColor + 1) % colors.length;
+            ballon.style.backgroundColor = colors[curColor];
+
+            if (ballon.offsetWidth > 420) {
+                ballon.style.width = '200px';
+                ballon.style.height = '200px';
+            }
+            const text = document.getElementById('balloon-size');
+            text.innerText = `Ballon size: ${ballon.offsetWidth}px`;
+            console.log(object);
+        }
+        const sizeDecrease = () => {
+            if (ballon.offsetWidth > 200) {
+                const ballonSize = ballon.offsetWidth;
+                ballon.style.width = ballonSize - 5 + 'px';
+                ballon.style.height = ballonSize - 5 + 'px';
+            }
+            curColor = (curColor - 1 + colors.length) % colors.length;
+            ballon.style.backgroundColor = colors[curColor];
+
+            const text = document.getElementById('balloon-size');
+            text.innerText = `Ballon size: ${ballon.offsetWidth}px`;
+
+        }
+
+        // document.querySelector('.ballon').addEventListener('mouseout', () => {
+        //     console.log(ballon);
+        //     ballon.style.width = ballonSize - 5 + 'px';
+        //     ballon.style.height = ballonSize - 5 + 'px';
+
+        //     nextColor = (nextColor - 1 + colors.length) % colors.length;
+        //     ballon.style.backgroundColor = colors[nextColor];
+
+        //     const text = document.getElementById('balloon-size');
+        //     text.innerText = `Ballon size: ${ballon.offsetWidth}px`;
+        // });
+    </script>
+</body>
+
+</html>
