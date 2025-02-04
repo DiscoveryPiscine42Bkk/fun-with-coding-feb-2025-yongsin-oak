@@ -7,4 +7,5 @@ td {
     padding-block: 64px;
     text-align: left;
     border: 1px solid black;
+    width: 50%;
 }
