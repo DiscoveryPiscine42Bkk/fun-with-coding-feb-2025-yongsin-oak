@@ -51,4 +51,5 @@ body {
     border: none;
     cursor: pointer;
     padding-block: 8px;
+    text-decoration: none;
 }
