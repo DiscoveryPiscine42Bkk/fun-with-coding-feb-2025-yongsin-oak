@@ -51,7 +51,6 @@
                 ballon.style.width = '200px';
                 ballon.style.height = '200px';
             }
-            const text = document.getElementById('balloon-size');
         }
         const sizeDecrease = () => {
             if (ballon.offsetWidth > 200) {
@@ -61,9 +60,6 @@
             }
             curColor = (curColor - 1 + colors.length) % colors.length;
             ballon.style.backgroundColor = colors[curColor];
-
-            const text = document.getElementById('balloon-size');
-
         }
     </script>
 </body>
