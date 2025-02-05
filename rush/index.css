@@ -1,0 +1,45 @@
+/* ------------------------- Global ---------------------------- */
+* {
+    font-family: "Kanit", serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+}
+
+/* ------------------------- Nav ---------------------------- */
+.sidenav {
+    height: 100%;
+    width: 150px;
+    position: fixed;
+    z-index: 1;
+    border-inline-end: 1px solid rgba(5, 5, 5, 0.06);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav>ul {
+    all: unset;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+/* ------------------------- main ---------------------------- */
+main {
+    width: 100%;
+    padding: 20px;
+    margin-inline-start: 150px;
+    transition: 0.5s;
+}
