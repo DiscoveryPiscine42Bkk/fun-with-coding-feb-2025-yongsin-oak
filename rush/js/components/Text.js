@@ -33,7 +33,7 @@ class Text extends HTMLElement {
       return "16px";
     };
     this.style.fontWeight = getFontWeight();
-    this.style.fontSize = getFontSize();
+    this.style.fontSize = this.getAttribute("size") || getFontSize();
     this.style.color = this.getAttribute("color") || "inherit";
     this.innerHTML = `<span>${this.textContent}</span>`;
   }
