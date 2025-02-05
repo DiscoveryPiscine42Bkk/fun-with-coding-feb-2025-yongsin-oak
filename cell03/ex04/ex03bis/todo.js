@@ -5,7 +5,6 @@ const saveTasks = () => {
   });
   document.cookie = `tasks=${JSON.stringify(tasks)}`;
 };
-
 const addTask = (text, save = true) => {
   const taskDiv = $("<div>").text(text);
   taskDiv.on("click", () => {
