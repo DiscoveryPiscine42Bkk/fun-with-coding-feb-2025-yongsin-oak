@@ -1,0 +1,174 @@
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section Styling */
+.section {
+    padding: 100px 0;
+    text-align: center;
+}
+
+/* Navbar Styling */
+.navbar {
+    background: rgba(0, 0, 0, 0.8);
+}
+.navbar a:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* To prevent navbar overlap */
+body {
+    margin: 0%;
+}
+
+/* Card Styling */
+.card {
+    margin-top: 20px;
+    border-radius: 15px;  /* Adding border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Adding shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth transition */
+}
+
+.card:hover {
+    transform: scale(1.05);  /* Slight scale on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);  /* Deeper shadow on hover */
+}
+
+.card-img-top {
+    height: 150px;  /* Smaller image */
+    object-fit: cover;
+    border-top-left-radius: 15px;  /* Rounded corners for image */
+    border-top-right-radius: 15px; 
+}
+
+.card-body {
+    padding: 1.25rem;  /* Smaller padding */
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+#home {
+    background-image: url('rush/assets/images/tsoontho/tsoontho_home_sec.jpg');
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+#home .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#home .col-md-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Profile image styling */
+#home .card-img-top {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%; /* Circular image */
+}
+
+/* Card styling */
+#home .card {
+    background: transparent;
+    border: none; 
+    border-radius: 0;
+    box-shadow: none; 
+}
+
+#home .card-body {
+    text-align: left;
+    padding: 2rem;
+}
+
+#home h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#home .lead {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+#home .btn {
+    font-size: 1.25rem;
+    padding: 0.75rem 2rem;
+}
+
+
+#about {
+    padding-top: 100px;
+    height: 100vh; 
+}
+
+#about .col-lg-4 img {
+    width: 300px;  /* Set a fixed width */
+    height: 300px;  /* Set a fixed height */
+    object-fit: cover;  /* Ensures the image doesn't get stretched */
+    border-radius: 50%;  /* Make the image circular */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Optional: Add a shadow for better visuals */
+}
+
+
+/* Portfolio Section Styling */
+#portfolio {
+    
+    padding: 100px 0;
+    height: 100vh;
+}
+
+/* contact section */
+#contact {
+    text-align: center;
+}
+.contact {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.contact .social-links a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.5);  /* Increase size on hover */
+    color: #f1f1f1;  /* Optionally change color on hover */
+}
+
+.about-section {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.progress-bar {
+    transition: width 1s ease-in-out;
+}
