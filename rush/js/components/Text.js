@@ -11,7 +11,19 @@ class Text extends HTMLElement {
       s2: "14px",
       s3: "12px",
     };
-
+    const fontWeights = {
+      medium: "500",
+      semiBold: "600",
+      bold: "700",
+    };
+    const getFontWeight = () => {
+      for (const key of Object.keys(fontWeights)) {
+        if (this.hasAttribute(key)) {
+          return fontWeights[key];
+        }
+      }
+      return "400";
+    };
     const getFontSize = () => {
       for (const key of Object.keys(fontSizes)) {
         if (this.hasAttribute(key)) {
@@ -20,10 +32,10 @@ class Text extends HTMLElement {
       }
       return "16px";
     };
-
+    this.style.fontWeight = getFontWeight();
     this.style.fontSize = getFontSize();
     this.style.color = this.getAttribute("color") || "inherit";
-    this.innerHTML = `<p>${this.textContent}</p>`;
+    this.innerHTML = `<span>${this.textContent}</span>`;
   }
 }
 customElements.define("my-text", Text);
