@@ -17,7 +17,7 @@
         align-items: center;
     }
 
-    .ballon {
+    .balloon {
         width: 200px;
         height: 200px;
         background-color: red;
@@ -34,25 +34,25 @@
 
 <body>
     <div class="container">
-        <div class="ballon" />
+        <div class="balloon" />
     </div>
     <script>
         $(document).ready(() => {
             let curColor = 0;
             const colors = ["red", "green", "blue"];
-            const $ballon = $('.ballon');
+            const $balloon = $('.balloon');
 
             const sizeIncrease = () => {
-                const ballonSize = $ballon.width();
-                $ballon.css({
-                    width: ballonSize + 10 + 'px',
-                    height: ballonSize + 10 + 'px'
+                const balloonSize = $balloon.width();
+                $balloon.css({
+                    width: balloonSize + 10 + 'px',
+                    height: balloonSize + 10 + 'px'
                 });
                 curColor = (curColor + 1) % colors.length;
-                $ballon.css('background-color', colors[curColor]);
+                $balloon.css('background-color', colors[curColor]);
 
-                if ($ballon.width() > 420) {
-                    $ballon.css({
+                if ($balloon.width() > 420) {
+                    $balloon.css({
                         width: '200px',
                         height: '200px'
                     });
@@ -60,19 +60,19 @@
             }
 
             const sizeDecrease = () => {
-                if ($ballon.width() > 200) {
-                    const ballonSize = $ballon.width();
-                    $ballon.css({
+                if ($balloon.width() > 200) {
+                    const ballonSize = $balloon.width();
+                    $balloon.css({
                         width: ballonSize - 5 + 'px',
                         height: ballonSize - 5 + 'px'
                     });
                 }
                 curColor = (curColor - 1 + colors.length) % colors.length;
-                $ballon.css('background-color', colors[curColor]);
+                $balloon.css('background-color', colors[curColor]);
             }
 
-            $ballon.on('click', sizeIncrease);
-            $ballon.on('mouseleave', sizeDecrease);
+            $balloon.on('click', sizeIncrease);
+            $balloon.on('mouseleave', sizeDecrease);
         });
     </script>
 </body>
