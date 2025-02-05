@@ -23,50 +23,53 @@
     </div>
 
     <script>
-        const calculate = () => {
-            const leftNum = parseInt($('#left').val());
-            const rightNum = parseInt($('#right').val());
-            const operator = $('#operator').val();
+        $(document).ready(() => {
+            const calculate = () => {
+                const leftNum = parseInt($('#left').val());
+                const rightNum = parseInt($('#right').val());
+                const operator = $('#operator').val();
 
-            if (isNaN(leftNum) || isNaN(rightNum) || leftNum < 0 || rightNum < 0) {
-                alert('Error :(');
-                return;
-            }
-
-            if ((operator === '/' || operator === '%') && rightNum === 0) {
-                alert("It's over 9000!");
-                return;
-            }
-
-            let result;
-            switch (operator) {
-                case '+':
-                    result = leftNum + rightNum;
-                    break;
-                case '-':
-                    result = leftNum - rightNum;
-                    break;
-                case '*':
-                    result = leftNum * rightNum;
-                    break;
-                case '/':
-                    result = leftNum / rightNum;
-                    break;
-                case '%':
-                    result = leftNum % rightNum;
-                    break;
-                default:
+                if (isNaN(leftNum) || isNaN(rightNum) || leftNum < 0 || rightNum < 0) {
+                    alert('Error :(');
                     return;
+                }
+
+                if ((operator === '/' || operator === '%') && rightNum === 0) {
+                    alert("It's over 9000!");
+                    return;
+                }
+
+                let result;
+                switch (operator) {
+                    case '+':
+                        result = leftNum + rightNum;
+                        break;
+                    case '-':
+                        result = leftNum - rightNum;
+                        break;
+                    case '*':
+                        result = leftNum * rightNum;
+                        break;
+                    case '/':
+                        result = leftNum / rightNum;
+                        break;
+                    case '%':
+                        result = leftNum % rightNum;
+                        break;
+                    default:
+                        return;
+                }
+                alert(result);
+                console.log(result);
             }
-            alert(result);
-            console.log(result);
-        }
 
-        $('#calculateButton').on('click', calculate);
+            $('#calculateButton').on('click', calculate);
 
-        setInterval(() => {
-            alert('Please, use me');
-        }, 30000);
+            setInterval(() => {
+                alert('Please, use me');
+            }, 30000);
+        })
+
     </script>
 </body>
 
