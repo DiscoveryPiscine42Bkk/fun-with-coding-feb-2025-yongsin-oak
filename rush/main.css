@@ -1,9 +1,4 @@
-/* ------------------------- Global ---------------------------- */
-* {
-    font-family: "Kanit", serif;
-    box-sizing: border-box;
-}
-
+/* ------------------------- body ---------------------------- */
 body {
     margin: 0;
     display: flex;
