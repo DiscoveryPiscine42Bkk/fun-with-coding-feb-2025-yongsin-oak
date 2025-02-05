@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <title>Calc</title>
 </head>
 
@@ -18,14 +19,14 @@
             <option value="%">%</option>
         </select>
         <input id="right" />
-        <button onclick="calculate()">Try me!</button>
+        <button id="calculateButton">Try me!</button>
     </div>
 
     <script>
         const calculate = () => {
-            const leftNum = parseInt(document.getElementById('left').value);
-            const rightNum = parseInt(document.getElementById('right').value);
-            const operator = document.getElementById('operator').value;
+            const leftNum = parseInt($('#left').val());
+            const rightNum = parseInt($('#right').val());
+            const operator = $('#operator').val();
 
             if (isNaN(leftNum) || isNaN(rightNum) || leftNum < 0 || rightNum < 0) {
                 alert('Error :(');
@@ -60,6 +61,8 @@
             alert(result);
             console.log(result);
         }
+
+        $('#calculateButton').on('click', calculate);
 
         setInterval(() => {
             alert('Please, use me');

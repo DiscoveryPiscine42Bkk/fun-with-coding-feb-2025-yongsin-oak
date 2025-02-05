@@ -16,7 +16,7 @@
         align-items: center;
     }
 
-    .ballon {
+    .balloon {
         width: 200px;
         height: 200px;
         background-color: red;
@@ -33,33 +33,33 @@
 
 <body>
     <div class="container">
-        <div class="ballon" onclick="sizeIncrease()" onmouseleave="sizeDecrease()">
+        <div class="balloon" onclick="sizeIncrease()" onmouseleave="sizeDecrease()">
         </div>
     </div>
     <script>
         let curColor = 0;
         const colors = ["red", "green", "blue"];
-        const ballon = document.querySelector('.ballon');
+        const balloon = document.querySelector('.balloon');
         const sizeIncrease = () => {
-            const ballonSize = ballon.offsetWidth;
-            ballon.style.width = ballonSize + 10 + 'px';
-            ballon.style.height = ballonSize + 10 + 'px';
+            const balloonSize = balloon.offsetWidth;
+            balloon.style.width = balloonSize + 10 + 'px';
+            balloon.style.height = balloonSize + 10 + 'px';
             curColor = (curColor + 1) % colors.length;
-            ballon.style.backgroundColor = colors[curColor];
+            balloon.style.backgroundColor = colors[curColor];
 
-            if (ballon.offsetWidth > 420) {
-                ballon.style.width = '200px';
-                ballon.style.height = '200px';
+            if (balloon.offsetWidth > 420) {
+                balloon.style.width = '200px';
+                balloon.style.height = '200px';
             }
         }
         const sizeDecrease = () => {
-            if (ballon.offsetWidth > 200) {
-                const ballonSize = ballon.offsetWidth;
-                ballon.style.width = ballonSize - 5 + 'px';
-                ballon.style.height = ballonSize - 5 + 'px';
+            if (balloon.offsetWidth > 200) {
+                const ballonSize = balloon.offsetWidth;
+                balloon.style.width = ballonSize - 5 + 'px';
+                balloon.style.height = ballonSize - 5 + 'px';
             }
             curColor = (curColor - 1 + colors.length) % colors.length;
-            ballon.style.backgroundColor = colors[curColor];
+            balloon.style.backgroundColor = colors[curColor];
         }
     </script>
 </body>

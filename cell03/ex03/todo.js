@@ -2,7 +2,7 @@ const saveTasks = () => {
   let tasks = [];
   document
     .querySelectorAll("#ft_list div")
-    .forEach((div) => tasks.push(div.textContent));
+    .forEach((div) => (tasks = [div.textContent, ...tasks]));
   document.cookie = `tasks=${JSON.stringify(tasks)}`;
 };
 
@@ -26,7 +26,7 @@ const newTask = () => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  const [key, saveTasks] = document.cookie.split("=");
+  const [_key, saveTasks] = document.cookie.split("=");
   if (saveTasks) {
     const tasks = JSON.parse(saveTasks);
     tasks.map((task) => addTask(task, false));
