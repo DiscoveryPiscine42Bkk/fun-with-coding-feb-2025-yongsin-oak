@@ -1,5 +1,37 @@
-class Text extends HTMLElement {
+class MyText extends HTMLElement {
+  static get observedAttributes() {
+    return [
+      "size",
+      "color",
+      "h1",
+      "h2",
+      "h3",
+      "h4",
+      "h5",
+      "h6",
+      "s1",
+      "s2",
+      "s3",
+      "medium",
+      "semiBold",
+      "bold",
+    ];
+  }
+
+  constructor() {
+    super();
+    this.updateStyles();
+  }
+
   connectedCallback() {
+    this.updateStyles();
+  }
+
+  attributeChangedCallback() {
+    this.updateStyles();
+  }
+
+  updateStyles() {
     const fontSizes = {
       h1: "32px",
       h2: "24px",
@@ -11,11 +43,13 @@ class Text extends HTMLElement {
       s2: "14px",
       s3: "12px",
     };
+
     const fontWeights = {
       medium: "500",
       semiBold: "600",
       bold: "700",
     };
+
     const getFontWeight = () => {
       for (const key of Object.keys(fontWeights)) {
         if (this.hasAttribute(key)) {
@@ -24,6 +58,7 @@ class Text extends HTMLElement {
       }
       return "400";
     };
+
     const getFontSize = () => {
       for (const key of Object.keys(fontSizes)) {
         if (this.hasAttribute(key)) {
@@ -32,10 +67,11 @@ class Text extends HTMLElement {
       }
       return "16px";
     };
+
     this.style.fontWeight = getFontWeight();
     this.style.fontSize = this.getAttribute("size") || getFontSize();
     this.style.color = this.getAttribute("color") || "inherit";
-    this.innerHTML = `<span>${this.textContent}</span>`;
   }
 }
-customElements.define("my-text", Text);
+
+customElements.define("my-text", MyText);
