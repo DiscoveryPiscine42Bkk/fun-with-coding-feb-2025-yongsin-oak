@@ -2,10 +2,174 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tanawat</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Boxicons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#home">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+        <!-- Home Section -->
+    <header id="home" class="home-section d-flex align-items-center text-center bg-primary text-white">
+        <div class="container">
+            <div class="row">
+                <!-- Left Card (Profile Image) -->
+                <div class="col-md-6 text-center">
+                    <div class="card border-light bg-transparent">
+                        <img src="../assets/images/tsoontho/tsoontho_main.jpg" class="card-img-top rounded-circle shadow-lg" alt="Your Profile Picture" style="width: 250px; height: 250px; object-fit: cover;">
+                    </div>
+                </div>
+
+                <!-- Right Card (Short Description) -->
+                <div class="col-md-6">
+                    <div class="card border-light bg-transparent">
+                        <div class="card-body">
+                            <h1 class="display-4">Hello, I'm <span class="text-light">Tanawat</span></h1>
+                            <p class="lead">A Passionate Developer & Data Enthusiast</p>
+                            <p class="text-light">I'm a Developer & Data Engineer specializing in Python, ETL, and Web Development. I transform data into insights and build automation solutions to streamline workflows.</p>
+                            <a href="#portfolio" class="btn btn-light btn-lg">View My Work</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- About Me Section -->
+    <section id="about" class="about-section py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4 text-primary">About Me</h2>
+            <div class="row align-items-center">
+                <!-- Profile Image -->
+                <div class="col-lg-4 text-center">
+                    <img src="../assets/images/tsoontho/tsoontho_prf3.jpg" class="img-fluid rounded-circle shadow-lg" alt="Your Profile Picture">
+                </div>
+                <!-- About Me Content -->
+                <div class="col-lg-8">
+                    <h3 class="mb-3 text-dark">Hi, I'm <span class="text-primary">Tanawat</span> 👋</h3>
+                    <p class="lead">I'm a passionate <strong class="text-primary">Developer & Data Engineer</strong> with expertise in <strong>Python, ETL, Web Development, and Automation</strong>. I specialize in transforming raw data into valuable insights and building efficient systems.</p>
+                    <p>With hands-on experience in **Microsoft Access, Pandas, and Webflow**, I create seamless automation solutions. I love problem-solving, optimizing workflows, and crafting beautiful user experiences.</p>
+
+                    <!-- Skill Bars -->
+                    <div class="mt-4">
+                        <h5 class="text-primary">Technical Skills</h5>
+                        <div class="mb-2">
+                            <span class="text-dark">Python & Data Processing</span>
+                            <div class="progress">
+                                <div class="progress-bar bg-success" style="width: 40%;">40%</div>
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <span class="text-dark">Web Development (HTML, CSS, JS)</span>
+                            <div class="progress">
+                                <div class="progress-bar bg-warning" style="width: 35%;">35%</div>
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <span class="text-dark">Database & Automation</span>
+                            <div class="progress">
+                                <div class="progress-bar bg-info" style="width: 56%;">56%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Download Resume & Contact -->
+                    <div class="mt-4">
+                        <a href="resume.pdf" class="btn btn-primary btn-lg me-2">Download Resume</a>
+                        <a href="#contact" class="btn btn-outline-dark btn-lg">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section with Grid -->
+    <div id="portfolio" class="section py-5 bg-secondary">
+        <h2 class="text-center text-light">My Work</h2>
+        <div class="container">
+            <div class="row g-3"> <!-- Added gap between cards -->
+                <!-- Card 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card border-primary">
+                        <img src="../assets/images/tsoontho/tsoontho_prj1.jpg" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Database System Improvement Using Automated Database Management</h5>
+                            <p class="card-text text-dark">
+                                work with Excel data related to terminal marshaling, cabinet positions, and other similar data, 
+                                automating the process with Python. This allows for easier data retrieval, 
+                                visualization, and more efficient management.
+                            </p>
+                            <button class="btn btn-primary view-more" data-project="Project 1 details: This project is about...">View More</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card border-success">
+                        <img src="../assets/images/tsoontho/tsoontho_prj2.jpg" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title text-success">Cobot Contest Thailand 2024</h5>
+                            <p class="card-text text-dark">
+                                Participate in coding the robot arm to successfully complete the mission with safety and reduced movement.
+                            </p>
+                            <button class="btn btn-success view-more" data-project="Project 2 details: This project focuses on...">View More</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card border-warning">
+                        <img src="https://cdn.dribbble.com/userupload/16559473/file/original-93b1b5449e8855aaa07bc5ed0ae36ef0.png?resize=1504x1128&vertical=center" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title text-warning">Hybrid AQI Forecasting: ARIMA & LSTM (In Process..)</h5>
+                            <p class="card-text text-dark">
+                                involves forecasting AQI using a hybrid ARIMA-LSTM model. ARIMA handles time-series trends, 
+                                while LSTM captures complex patterns in the data. 
+                                This combination aims to improve the accuracy and reliability of air quality predictions.
+                            </p>
+                            <button class="btn btn-warning view-more" data-project="Project 3 details: This project is all about...">View More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="section bg-dark text-white py-5">
+        <h2 class="text-center">Contact Me</h2>
+        <p class="text-center">Let's get in touch!</p>
+        <div class="social-links text-center">
+            <a href="https://facebook.com/yourprofile" target="_blank"><i class="bx bxl-facebook fs-4 text-white me-3"></i></a>
+            <a href="https://instagram.com/yourprofile" target="_blank"><i class="bx bxl-instagram fs-4 text-white me-3"></i></a>
+            <a href="https://twitter.com/yourprofile" target="_blank"><i class="bx bxl-twitter fs-4 text-white me-3"></i></a>
+            <a href="https://github.com/yourprofile" target="_blank"><i class="bx bxl-github fs-4 text-white me-3"></i></a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="bx bxl-linkedin fs-4 text-white me-3"></i></a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
