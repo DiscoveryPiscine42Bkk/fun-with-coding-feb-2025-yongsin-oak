@@ -1,16 +1,171 @@
-.sideNav {
+/* -----------------------------------------------Font----------------------------------------------- */
+@font-face {
+    font-family: 'Pixeloid';
+    src: url('../assets/font/pixeloid-font/PixeloidSans-mLxMm.ttf'), format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Pixeloid';
+    src: url('../assets/font/pixeloid-font/PixeloidMono-d94EV.ttf'), format('truetype');
+    font-style: mono;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Pixeloid';
+    src: url('../assets/font/pixeloid-font/PixeloidSansBold-PKnYd.ttf'), format('truetype');
+    font-style: normal;
+    font-weight: 500;
+}
+/* -----------------------------------------------Global----------------------------------------------- */
+* {
+    font-family: 'Pixeloid', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+/* -----------------------------------------------Nav----------------------------------------------- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #212529;
+    padding: 10px 20px;
     position: fixed;
     top: 0;
-    left: 0;
-    width: 150px;
-    height: 100%;
-    background: white;
-    border-inline-end: 1px solid;
-    padding-top: 50px;
-    z-index: 999;
-    transition: width 0.5s;
-    -webkit-transition: width 0.5s;
-    -moz-transition: width 0.5s;
-    -ms-transition: width 0.5s;
-    -o-transition: width 0.5s;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+}
+
+.active-nav::before {
+    content: '\25B6 ';
+    /* 8-bit style arrow */
+    color: yellow;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+/* -----------------------------------------------section & footer----------------------------------------------- */
+section {
+    height: 100vh;
+    padding: 100px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    background-color: #212529;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    height: 50vh;
+}
+/* -----------------------------------------------About----------------------------------------------- */
+#about {
+    padding-top: 64px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    background-color: coral;
+}
+
+#about>.img-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container>.img-border {
+    width: 300px
+}
+
+.img {
+    width: 100%;
+}
+
+.img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+/* -----------------------------------------------Responsive----------------------------------------------- */
+@media (max-width: 768px) {
+    /* -----------------------------------------------Nav----------------------------------------------- */
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #212529;
+        padding-top: 10px;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        text-align: left;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* -----------------------------------------------About----------------------------------------------- */
+    .img-container>.img-border {
+        width: 360px;
+        height: auto;
+    }
+
+    #about {
+        display: flex;
+        gap: 32px;
+        flex-direction: column;
+    }
+
+    #about div-column {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 440px) {
+
+    /* -----------------------------------------------About----------------------------------------------- */
+    .img-container>.img-border {
+        width: 200px;
+        height: auto;
+    }
 }

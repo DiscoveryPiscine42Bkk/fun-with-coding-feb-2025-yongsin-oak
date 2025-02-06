@@ -1,10 +1,14 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
-    font-family: "Kanit", serif;
     box-sizing: border-box;
 }
 a {
     all: unset;
 }
-li {
-    list-style-type: none;
+.divColumn {
+    display: flex;
+    flex-direction: column;
 }
