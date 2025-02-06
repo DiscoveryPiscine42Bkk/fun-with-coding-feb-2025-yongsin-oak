@@ -1,6 +1,7 @@
 class Nav extends HTMLElement {
   connectedCallback() {
     const navItems = {
+      home: "Home",
       about: "About",
       skills: "Skills",
       contact: "Contact",
@@ -13,7 +14,9 @@ class Nav extends HTMLElement {
             ${Object.keys(navItems)
               .map(
                 (item) =>
-                  `<a href="#${item}" class="nav-item">${navItems[item]}</a>`
+                  `<a href="${
+                    item === "home" ? "/rush/main.html" : "#" + item
+                  }" class="nav-item">${navItems[item]}</a>`
               )
               .join("")}
         </div>
