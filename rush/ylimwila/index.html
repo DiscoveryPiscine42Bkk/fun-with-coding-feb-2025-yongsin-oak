@@ -4,7 +4,8 @@
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Yongsin</title>
+        <link rel="shortcut icon" href="../assets/images/ylimwila/kafka.jpg" type="image/x-icon">
+        <title>ylimwila</title>
         <!-- minify -->
         <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
         <!-- latest -->
@@ -16,20 +17,31 @@
 </head>
 
 <body>
+        <dialog class="nes-dialog is-dark is-rounded" id="dialog-dark-rounded">
+                <form method="dialog">
+                        <p class="title">Dark and Rounded dialog</p>
+                        <p>Alert: this is a dialog.</p>
+                        <menu class="dialog-menu">
+                                <button class="nes-btn">Cancel</button>
+                                <button class="nes-btn is-primary">Confirm</button>
+                        </menu>
+                </form>
+        </dialog>
         <my-nav></my-nav>
+
         <my-section myid="about">
                 <div class="img-container">
                         <div class="nes-container with-title is-centered img-border">
-                                <p class="title" style="background-color: coral;">Oak</p>
+                                <p class="title">Oak</p>
                                 <div class="img">
-                                        <img src="../assets/images/ylimwila/about.jpg" alt="">
+                                        <img src="../assets/images/ylimwila/yongsin_main.jpg" alt="">
                                 </div>
                         </div>
                 </div>
                 <div-column gap="4px">
-                        <h2 class="title">Hello, I'm Yongsin Limwilaikul (Oak)</h2>
-                        <my-text>Aspiring Full-stack Developer</my-text>
-                        <my-text s3 color="white">I am currently a Front-end Developer with 6 months of internship
+                        <h2 class="title typewriter"></h2>
+                        <my-text h5>Aspiring Full-stack Developer</my-text>
+                        <my-text s2 color="white">I am currently a Front-end Developer with 6 months of internship
                                 experience using
                                 React.js,
                                 React Native, and TypeScript at a startup company. During my internship, I had the
@@ -178,16 +190,110 @@
                         </div>
 
                 </div>
-                <a href="../assets/file/oak/resume.pdf" download><button type="button"
+                <a href="../assets/file/oak/Resume_Yongsin.pdf" download><button type="button"
                                 class="nes-btn is-primary">Download
                                 Resume</button></a>
         </my-section>
+        <my-section myid="portfolio">
+                <div class="cards">
+                        <div class="nes-container is-rounded is-dark with-title">
+                                <p class="title">Tictactalk</p>
+                                <div class="card">
+                                        <div class="card-img">
+                                                <img src="../assets/images/ylimwila/project/tictactalk.png" alt="">
+                                        </div>
+                                        <div class="card-content">
+                                                <h3 class="title">TicTacToe With Realtime Chat</h3>
+                                                <div class="desc-container">
+                                                        <p class="description ellipsisText" id="tictactoe-development">
+                                                                <b>Development: </b>
+                                                                advanced tic-tac-toe online
+                                                                website
+                                                                with three piece sizes. 1v1 and 2v2 modes, and real-time
+                                                                chat,
+                                                                scoreboard, login/logout system.
+                                                        </p>
+                                                        <a class="more-text" for="tictactoe-development"
+                                                                onclick="ellipsisText(this)">More</a>
+                                                </div>
+                                                <div class="desc-container">
+                                                        <p class="description ellipsisText" id="tictactoe-design">
+                                                                <b>Design: </b>
+                                                                Tailored the design to appeal to a teenage audience,
+                                                                with the initial concept focusing on connecting with
+                                                                strangers
+                                                                through tic-tac-toe and fostering conversations, similar
+                                                                to a
+                                                                virtual board game cafe.
+                                                        </p>
+                                                        <a class="more-text" for="tictactoe-design"
+                                                                onclick="ellipsisText(this)">More</a>
+                                                </div>
+                                                <a target="_blank" href="https://github.com/yongsin-oak/tictactalk"
+                                                        class="nes-btn is-primary">View</a>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="nes-container is-rounded is-dark with-title">
+                                <p class="title">Smurpark</p>
+                                <div class="card">
+                                        <div class="card-img">
+                                                <img src="../assets/images/ylimwila/project/smurpark.png" alt="">
+                                        </div>
+                                        <div class="card-content">
+                                                <h3 class="title">Smurpark Webtoon</h3>
+                                                <div class="desc-container">
+                                                        <p class="description ellipsisText" id="smurpark-development">
+                                                                <b>Development: </b>
+                                                                Interactive website, and worked closely with
+                                                                the team to ensure
+                                                                that the final website closely matched the design
+                                                                specifications.
+                                                        </p>
+                                                        <a class="more-text" for="smurpark-development"
+                                                                onclick="ellipsisText(this)">More</a>
+                                                </div>
+                                                <div class="desc-container">
+                                                        <p class="description ellipsisText" id="smurpark-collab">
+                                                                <b>Collaboration: </b>
+                                                                Collaborated
+                                                                with
+                                                                students from
+                                                                other disciplines to
+                                                                effectively communicate ideas and achieve common goals.
+                                                        </p>
+                                                        <a class="more-text" for="smurpark-collab"
+                                                                onclick="ellipsisText(this)">More</a>
+
+                                                </div>
+                                                <div class="desc-container">
+                                                        <p class="description ellipsisText" id="smurpark-res">
+                                                                <b>Responsive Design: </b>
+                                                                Implemented responsive
+                                                                design
+                                                                principles to
+                                                                ensure optimal user
+                                                                experience across various devices and screen sizes.
+                                                        </p>
+                                                        <a class="more-text" for="smurpark-res"
+                                                                onclick="ellipsisText(this)">More</a>
+
+                                                </div>
+                                                <a target="_blank"
+                                                        href="https://github.com/yongsin-oak/Multi-Pro-Project"
+                                                        class="nes-btn is-primary">View</a>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </my-section>
 
         <footer id="contact" class="nes-container is-dark">
-                <h2 class="title">Contact</h2>
+                <h2 class="title">Contacts</h2>
                 <div class="contact-container">
-                        <a href="https://www.instagram.com/lloakkkkkll/"><i class="nes-icon instagram"></i></a>
-                        <a href="https://github.com/yongsin-oak"><i class="nes-icon github"></i></a>
+                        <a href="https://www.instagram.com/lloakkkkkll/" target="_blank"><i
+                                        class="nes-icon instagram"></i></a>
+                        <a href="https://github.com/yongsin-oak" target="_blank"><i class="nes-icon github"></i></a>
                         <a href="mailto:yongsin.oak@gmail.com"><i class="nes-icon gmail"></i></a>
                 </div>
         </footer>

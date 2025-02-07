@@ -5,10 +5,3 @@ html {
 * {
     box-sizing: border-box;
 }
-a {
-    all: unset;
-}
-.divColumn {
-    display: flex;
-    flex-direction: column;
-}
