@@ -70,6 +70,7 @@ main {
 a {
     all: unset;
 }
+
 .container {
     display: flex;
     gap: 32px;
@@ -130,14 +131,20 @@ a {
     -ms-transform: scale(1.05);
     -o-transform: scale(1.05);
 }
+
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
     }
+    main {
+        text-align: center;
+    }
+
     .title {
         font-size: 2rem !important;
     }
+
     .card {
-        width: 200px;
+        width: 70vw;
     }
 }
