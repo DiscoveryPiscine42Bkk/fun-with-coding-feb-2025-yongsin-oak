@@ -33,15 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
   typeWriter();
-  // document.getElementById("music-toggle").addEventListener("click", (e) => {
-  //   if (backgroundSong.muted) {
-  //     backgroundSong.muted = false;
-  //     e.target.innerText = "Mute Song";
-  //   } else {
-  //     backgroundSong.muted = true;
-  //     e.target.innerText = "Unmute Song";
-  //   }
-  // });
   let backgroundSong;
   let hoverSound;
   let skipSound;
@@ -64,13 +55,15 @@ document.addEventListener("DOMContentLoaded", () => {
       clickSound.volume = 0.5;
 
       backgroundSong.play();
-      document.getElementById("music-toggle").innerText = "Mute Song";
+      document.querySelectorAll(".music-toggle").forEach((btn) => {
+        btn.innerText = "Mute Song";
+      });
     },
     { once: true }
   );
 
   document.querySelectorAll(".music-toggle").forEach((btn) => {
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", (e) => {
       if (backgroundSong.muted) {
         backgroundSong.muted = false;
         e.target.innerText = "Mute Song";

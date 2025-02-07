@@ -64,6 +64,9 @@ main {
 }
 
 /* ------------------------- Cards ---------------------------- */
+a {
+    all: unset;
+}
 .container {
     display: flex;
     gap: 32px;
