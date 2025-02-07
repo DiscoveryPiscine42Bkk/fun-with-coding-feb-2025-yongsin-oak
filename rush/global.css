@@ -5,6 +5,3 @@ html {
 * {
     box-sizing: border-box;
 }
-a {
-    all: unset;
-}

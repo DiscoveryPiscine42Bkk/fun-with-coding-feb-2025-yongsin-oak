@@ -10,7 +10,10 @@ class Nav extends HTMLElement {
 
     this.innerHTML = `
     <nav>
-        <button class="menu-toggle">☰</button>
+        <div class="mobile-toggle">
+          <button class="menu-toggle">☰</button>
+          <button class="music-toggle" id="mobile">Unmute Song</button>
+        </div>
         <div class="nav-links">
             ${Object.keys(navItems)
               .map(
@@ -21,6 +24,7 @@ class Nav extends HTMLElement {
               )
               .join("")}
         </div>
+        <button class="music-toggle" id="computer">Unmute Song</button>
     </nav>`;
   }
 }
