@@ -4,7 +4,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    overflow-y: auto;
     background: linear-gradient(135deg, #FFAFBD, #FFC3A0, #FFD3B6, #FF677D);
     background-size: 300% 300%;
     animation: gradientAnimation 6s infinite linear alternate;
@@ -30,6 +31,7 @@ main {
     flex-direction: column;
     gap: 32px;
     align-items: center;
+    padding: 32px;
 }
 
 /* ------------------------- Title ---------------------------- */
@@ -39,6 +41,7 @@ main {
     font-weight: bold;
     font-size: 3rem;
     animation: titleBounce 1.5s infinite;
+    -webkit-animation:;
 }
 
 @keyframes titleBounce {
@@ -126,4 +129,15 @@ a {
     -moz-transform: scale(1.05);
     -ms-transform: scale(1.05);
     -o-transform: scale(1.05);
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .title {
+        font-size: 2rem !important;
+    }
+    .card {
+        width: 400px;
+    }
 }
