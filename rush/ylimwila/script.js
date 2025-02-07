@@ -1,5 +1,5 @@
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelector(".menu-toggle").addEventListener("click", function () {
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector(".menu-toggle").addEventListener("click", () => {
     document.querySelector(".nav-links").classList.toggle("active");
   });
 
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
   sections.forEach((section) => observer.observe(section));
 
   const hoverSound = new Audio("../assets/sound/hover.mp3");
-  hoverSound.volume = 0.5; // Decrease volume to 50%
+  hoverSound.volume = 0.5;
   document.querySelectorAll(".nav-item").forEach((item) => {
     item.addEventListener("mouseenter", () => {
       hoverSound.currentTime = 0;
@@ -31,3 +31,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+const ellipsisText = (btn) => {
+  const text = document.querySelector(`#${btn.getAttribute("for")}`);
+  if (text.classList.contains("ellipsisText")) {
+    text.classList.remove("ellipsisText");
+  } else {
+    text.classList.add("ellipsisText");
+  }
+};

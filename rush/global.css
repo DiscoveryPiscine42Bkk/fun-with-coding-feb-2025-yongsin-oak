@@ -8,7 +8,3 @@ html {
 a {
     all: unset;
 }
-.divColumn {
-    display: flex;
-    flex-direction: column;
-}
