@@ -36,7 +36,7 @@ html {
 .home-section {
     position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background: url('https://wallpapers-clan.com/wp-content/uploads/2023/11/aesthetic-night-ocean-desktop-wallpaper-preview.jpg') no-repeat center center/cover;
     background-attachment: fixed;
 }
@@ -83,7 +83,7 @@ html {
 
 /*======= About Section =======*/
 #about {
-    height: 100vh;
+    min-height: 100vh;
     background-image: linear-gradient(#010818, #253b64);
     display: flex;
     justify-content: center;
@@ -162,7 +162,7 @@ html {
     padding-top: 100px;
     background: url('https://wallpapers-clan.com/wp-content/uploads/2023/11/dark-night-over-ocean-desktop-wallpaper-preview.jpg') no-repeat center center/cover;
     padding-bottom: 50px;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
