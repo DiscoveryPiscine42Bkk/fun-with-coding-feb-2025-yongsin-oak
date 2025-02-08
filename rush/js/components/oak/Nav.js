@@ -19,7 +19,7 @@ class Nav extends HTMLElement {
               .map(
                 (item) =>
                   `<a href="${
-                    item === "home" ? "/rush/main.html" : "#" + item
+                    item === "home" ? "/rush/index.html" : "#" + item
                   }" class="nav-item">${navItems[item]}</a>`
               )
               .join("")}
