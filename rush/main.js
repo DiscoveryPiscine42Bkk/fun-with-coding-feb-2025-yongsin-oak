@@ -16,5 +16,4 @@ cardJeno.addEventListener("mouseover", () => {
 
 cardJeno.addEventListener("mouseout", () => {
   title.textContent = "Can you choose?";
-  console.log("object");
 });
